@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jscript DOM Color Changer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(210, 227, 200);
+
+        }
+
+        #container {
+            background-color: rgb(134, 167, 137);
+            width: 80vh;
+            height:50vh;
+            padding: 50px;
+            border-radius: 15px;
+            border: 5px solid rgb(79, 111, 82);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 250px;
+        }
+
+        h1 {
+            background-color: rgb(79, 111, 82);
+            font-family: Helvetica;
+            padding: 10px;
+            border-radius: 8px;
+            color: rgb(236, 255, 230);
+
+        }
+
+        #CC {
+            background-color: green;
+            width: 150px;
+            height: 150px;
+            margin:  70px 0 40px;
+            border-radius: 20px;
+            border: 3px solid rgb(54, 77, 56);
+            transition: 0.3s ease-in-out;
+
+        }
+
+        button {
+            background-color: rgb(115, 144, 114);
+            color: rgb(236, 255, 230);
+            width: 130px;
+            height: 40px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            border: 2px solid rgb(54, 77, 56);
+        }
+
+        button:hover {
+            background-color: rgb(79, 111, 82) ;
+            transform: scale(1.1);
+            transition: 0.2s;
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id="content">
+            <h1>"JavaScript colorChanger() Hands-On"</h1>
+        </div>
+
+        <div id="CC"></div>
+
+        <button id="changeColor">Click Me!</button>
+        
+    </div>
+
+
+    <script>
+            var button = document.getElementById("changeColor");
+            var colorDiv = document.getElementById("CC");
+
+            changeColor.addEventListener("click", changeColors);
+
+            function changeColors() {
+                if (colorDiv.style.backgroundColor === "green") {
+                    colorDiv.style.backgroundColor = "blue";
+                } else {
+                    colorDiv.style.backgroundColor = "green";
+                }
+            }
+    </script>
+    
+</body>
+</html>
